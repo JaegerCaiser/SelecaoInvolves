@@ -1,15 +1,12 @@
 package com.involves.selecao.service;
 
-import java.util.Set;
-
 import com.involves.selecao.alerta.Alerta;
+import com.involves.selecao.alerta.Pesquisa;
 import com.involves.selecao.repository.AlertaRepository;
 import com.involves.selecao.service.client.PesquisasFeignClient;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.involves.selecao.alerta.Pesquisa;
-import com.involves.selecao.gateway.AlertaGateway;
+import java.util.Set;
 
 @Service
 public class ProcessadorAlertas {

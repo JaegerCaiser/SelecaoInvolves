@@ -40,7 +40,7 @@ public class AlertaControllerIntTest {
 
     @Test
     public void testEndPointResponse() throws Exception {
-        alertaControllerMockMvc.perform(get("/alertas/processar"))
+        alertaControllerMockMvc.perform(get("/alertas"))
                 .andExpect(status().isOk());
     }
 }
