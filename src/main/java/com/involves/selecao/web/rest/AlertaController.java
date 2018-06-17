@@ -1,4 +1,4 @@
-package com.involves.selecao;
+package com.involves.selecao.web.rest;
 
 import java.io.IOException;
 import java.util.List;
@@ -16,11 +16,14 @@ import com.involves.selecao.service.ProcessadorAlertas;
 @RequestMapping("/alertas")
 public class AlertaController {
 
-    @Autowired
     private BuscaAlertasService buscaAlertasService;
 
-    @Autowired
     private ProcessadorAlertas processador;
+
+    public AlertaController(BuscaAlertasService buscaAlertasService, ProcessadorAlertas processador) {
+        this.buscaAlertasService = buscaAlertasService;
+        this.processador = processador;
+    }
 
     @GetMapping
     public List<Alerta> alertas() {

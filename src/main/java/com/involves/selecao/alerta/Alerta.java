@@ -1,7 +1,11 @@
 package com.involves.selecao.alerta;
 
+import org.springframework.data.annotation.Id;
+
 public class Alerta {
 
+    @Id
+    private String id;
     private String pontoDeVenda;
     private String descricao;
     private String sobre;
@@ -65,5 +69,17 @@ public class Alerta {
         this.sobre = pesquisa.getProduto() != null ? pesquisa.getProduto() : pesquisa.getCategoria();
         this.pontoDeVenda = pesquisa.getPonto_de_venda();
         this.margem = margem;
+    }
+
+    @Override
+    public String toString() {
+        return "Alerta{" +
+                "id='" + id + '\'' +
+                ", pontoDeVenda='" + pontoDeVenda + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", sobre='" + sobre + '\'' +
+                ", flTipo=" + flTipo +
+                ", margem=" + margem +
+                '}';
     }
 }

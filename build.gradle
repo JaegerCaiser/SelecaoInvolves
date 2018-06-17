@@ -19,6 +19,11 @@ group = 'com.involves'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+bootJar {
+	baseName = 'selecao'
+	version =  '0.1.0'
+}
+
 ext {
 	springCloudVersion = 'Finchley.RC2'
 }
@@ -34,7 +39,8 @@ dependencies {
 	compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
 	compile 'org.mongodb:mongo-java-driver:3.7.0'
 	compile 'io.github.openfeign:feign-gson:9.7.0'
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 dependencyManagement {
