@@ -1,13 +1,11 @@
 package com.involves.selecao.service;
 
-import java.util.List;
-
+import com.involves.selecao.alerta.Alerta;
 import com.involves.selecao.repository.AlertaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.involves.selecao.alerta.Alerta;
-import com.involves.selecao.gateway.AlertaGateway;
+import java.util.List;
 
 @Service
 public class BuscaAlertasService {
