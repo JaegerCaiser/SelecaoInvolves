@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {AlertasService} from "./alertas.service";
 import {AlertaModel} from "./alertaModel";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-alertas',
@@ -10,7 +11,7 @@ export class AlertasComponent implements OnInit {
 
     alertas: AlertaModel[] = []
 
-    constructor(private alertasService: AlertasService) {
+    constructor(private alertasService: AlertasService, private router: Router) {
     }
 
     ngOnInit(): void {
@@ -20,6 +21,9 @@ export class AlertasComponent implements OnInit {
 
     processar(): void {
         this.alertasService.processar()
+            .subscribe((data) => {
+                this.router.navigate(['/'])
+            })
     }
 
 }
