@@ -1,0 +1,1 @@
+export const INVOLVES_API = 'http://localhost:8080'

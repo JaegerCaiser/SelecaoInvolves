@@ -1,0 +1,23 @@
+<!-- INíCIO do CONTEÚDO -->
+<section class="content-header">
+    <h1>
+        Todos os alertas
+    </h1>
+</section>
+
+
+<section class="content">
+
+    <div class="row">
+        <div *ngFor="let alerta of alertas" class="col-sm-6 col-xs-12">
+            <app-alerta [alerta]="alerta"></app-alerta>
+        </div>
+    </div>
+
+    <div *ngIf="alertas.length === 0">
+        <button (click)="processar()">Processar</button>
+    </div>
+
+</section>
+
+<!-- FIM  do CONTEÚDO -->
